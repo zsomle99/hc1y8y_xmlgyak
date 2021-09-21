@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+	
+	<cim cím="Miskolc, Egyetemváros"/>
+	
+	<hallgatók>
+		<hallgató név="mintanev" lakcim="mintacim"/>
+	</hallgatók>
+	
+	<előadó név="mintanev" adószám="001" lakcim="mintacim"/>
+	
+	<dátum dátum="2021.09.21"/>
+	
+</konferencia>
