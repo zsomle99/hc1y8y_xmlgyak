@@ -47,8 +47,8 @@
 	<szak Programtervező Informatikus />
 	</ora>
 	
-	<ora id="ai" típus="gyakorlat">
-	<targy Mesterséges Intelligencia />
+	<ora id="xml" típus="gyakorlat">
+	<targy Adatkezelés XML-ben />
 	
 	<idopont>
 		<nap Kedd />
@@ -62,7 +62,7 @@
 	</ora>
 	
 	<ora id="web" típus="gyakorlat">
-	<targy Adatkezelés XML-ben />
+	<targy WEBtechnológiák />
 	
 	<idopont>
 		<nap Kedd />
@@ -70,10 +70,54 @@
 		<veg 18:00 />
 	</idopont>
 	
-	<helyszin III. előadó />
-	<oktato Dr. Bednarik László />
+	<helyszin 103. terem />
+	<oktato Agárdi Anita />
 	<szak Programtervező Informatikus />
 	</ora>
 	
 </orarend>
-,ai,xml,váll
+
+<orarend id=03>
+	<ora id="ai" típus="gyakorlat">
+	<targy Mesterséges Intelligencia />
+	
+	<idopont>
+		<nap Szerda />
+		<kezdes 10:00 />
+		<veg 11:00 />
+	</idopont>
+	
+	<helyszin 15. terem />
+	<oktato Dudás László />
+	<szak Programtervező Informatikus />
+	</ora>
+	
+	<ora id="váll" típus="elmélet">
+	<targy Vállalati információs rendszerek />
+	
+	<idopont>
+		<nap Szerda />
+		<kezdes 16:00 />
+		<veg 18:00 />
+	</idopont>
+	
+	<helyszin 103 terem />
+	<oktato Dr. Sasvári Péter />
+	<szak Programtervező Informatikus />
+	</ora>
+	
+	<ora id="váll" típus="gyakorlat">
+	<targy Vállalati információs rendszerek />
+	
+	<idopont>
+		<nap Szerda />
+		<kezdes 18:00 />
+		<veg 20:00 />
+	</idopont>
+	
+	<helyszin 103 terem />
+	<oktato Dr. Sasvári Péter />
+	<szak Programtervező Informatikus />
+	</ora>
+	
+</orarend>
