@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<!ELEMENT konyvek (konyv)*>
+<!ELEMENT konyv (cim,kiadasi_ev,kiado,szerzo)>
+<!ELEMENT cim (#PCDATA)>
+<!ELEMENT kiadasi_ev (#ANY)>
+<!ELEMENT kiado (#PCDATA)>
+<!ELEMENT szerzo (#PCDATA)>
