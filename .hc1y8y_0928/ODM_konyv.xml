@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konyvek>
+	<konyv id="01">
+		<cim>Android zsebkönyv</cim>
+		<kiadasi_ev>2019.10.28</kiadasi_ev>
+		<kiado>BBS-Info Kft.</kiado>
+		<szerzo>Bártfai Barnabás</szerzo>
+	</konyv>
+	
+	<konyv id="02">
+		<cim>Windows 10 mindenkinek</cim>
+		<kiadasi_ev>2016.01.20</kiadasi_ev>
+		<kiado>BBS-Info Kft.</kiado>
+		<szerzo>Bártfai Barnabás</szerzo>
+	</konyv>
+	
+	<konyv id="03">
+		<cim>Darknet - avagy az internet sötét oldala</cim>
+		<kiadasi_ev>2021.02.03</kiadasi_ev>
+		<kiado>BBS-Info Kft.</kiado>
+		<szerzo>Nagy Róbert</szerzo>
+	</konyv>
+	
+</konyvek>
