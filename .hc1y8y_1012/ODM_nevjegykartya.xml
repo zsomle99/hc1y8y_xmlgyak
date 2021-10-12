@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nevjegykartyak>
+	<nevjegykartya id="01">
+		<nev>Kiss Janos</nev>
+		<ceg>
+			<nev>Pelda Kft.</nev>
+			<cim>
+				<iranyitoszam>3564</iranyitoszam>
+				<varos>Hernadnemeti</varos>
+				<utca>Dozsa György</utca>
+				<hazszam>20</hazszam>
+			</cim>
+			<telefonszam>06201234567</telefonszam>
+			<weblap>www.peldaweb.org</weblap>
+		</ceg>
+		<beosztas>Human Resources Manager</beosztas>
+		<telefonszam1>06301234567</telefonszam1>
+		<email>Kiss.Janos@peldakft.com</email>
+	</nevjegykartya>
+	<nevjegykartya id="02">
+		<nev>Kiss Peter</nev>
+		<ceg>
+			<nev>Pelda Kft.</nev>
+			<cim>
+				<iranyitoszam>3564</iranyitoszam>
+				<varos>Hernadnemeti</varos>
+				<utca>Dozsa György</utca>
+				<hazszam>20</hazszam>
+			</cim>
+			<telefonszam>06201234567</telefonszam>
+			<weblap>www.peldaweb.org</weblap>
+		</ceg>
+		<beosztas>Human Resources Manager</beosztas>
+		<telefonszam1>06301234568</telefonszam1>
+		<email>Kiss.Peter@peldakft.com</email>
+	</nevjegykartya>
+</nevjegykartyak>
