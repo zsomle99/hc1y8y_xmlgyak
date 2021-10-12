@@ -1,123 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<orarend id=01>
-	<ora id="web" típus="elmélet">
-	<targy WEbtechneológiák />
-	
-	<idopont>
-		<nap Hétfő />
-		<kezdes 12:00 />
-		<veg 14:00 />
-	</idopont>
-	
-	<helyszin XX. előadó />
-	<oktato Agárdi Anita />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	<ora id="ai" típus="elmélet">
-	<targy Mesterséges Intelligencia />
-	
-	<idopont>
-		<nap Hétfő />
-		<kezdes 14:00 />
-		<veg 17:00 />
-	</idopont>
-	
-	<helyszin XX. előadó />
-	<oktato Dudás László />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	
-</orarend>
-
-<orarend id=02>
-	<ora id="xml" típus="elmélet">
-	<targy Adatkezelés XML-ben />
-	
-	<idopont>
-		<nap Kedd />
-		<kezdes 12:00 />
-		<veg 14:00 />
-	</idopont>
-	
-	<helyszin III. előadó />
-	<oktato Dr. Bednarik László />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	<ora id="xml" típus="gyakorlat">
-	<targy Adatkezelés XML-ben />
-	
-	<idopont>
-		<nap Kedd />
-		<kezdes 14:00 />
-		<veg 16:00 />
-	</idopont>
-	
-	<helyszin 103 terem />
-	<oktato Dr. Bednarik László />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	<ora id="web" típus="gyakorlat">
-	<targy WEBtechnológiák />
-	
-	<idopont>
-		<nap Kedd />
-		<kezdes 16:00 />
-		<veg 18:00 />
-	</idopont>
-	
-	<helyszin 103. terem />
-	<oktato Agárdi Anita />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-</orarend>
-
-<orarend id=03>
-	<ora id="ai" típus="gyakorlat">
-	<targy Mesterséges Intelligencia />
-	
-	<idopont>
-		<nap Szerda />
-		<kezdes 10:00 />
-		<veg 11:00 />
-	</idopont>
-	
-	<helyszin 15. terem />
-	<oktato Dudás László />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	<ora id="váll" típus="elmélet">
-	<targy Vállalati információs rendszerek />
-	
-	<idopont>
-		<nap Szerda />
-		<kezdes 16:00 />
-		<veg 18:00 />
-	</idopont>
-	
-	<helyszin 103 terem />
-	<oktato Dr. Sasvári Péter />
-	<szak Programtervező Informatikus />
-	</ora>
-	
-	<ora id="váll" típus="gyakorlat">
-	<targy Vállalati információs rendszerek />
-	
-	<idopont>
-		<nap Szerda />
-		<kezdes 18:00 />
-		<veg 20:00 />
-	</idopont>
-	
-	<helyszin 103 terem />
-	<oktato Dr. Sasvári Péter />
-	<szak Programtervező Informatikus />
-	</ora>
-	
+<orarend     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="DMT_orarend.xsd">
+  <ora id="01" tipus="előadás">
+    <targy>Adatkezelés XML-ben</targy>
+    <idopont>
+      <nap>Kedd</nap>
+      <tol>12:00</tol>
+      <ig>14:00</ig>
+    </idopont>
+    <helyszin>I A2 fsz.</helyszin>
+    <oktato>Dr. Bendarik László</oktato>
+    <szak>Programmtervező Informatikus</szak>
+  </ora>
+  <ora id="02" tipus="gyakorlat">
+    <targy>Adatkezelés XML-ben</targy>
+    <idopont>
+      <nap>Kedd</nap>
+      <tol>14:00</tol>
+      <ig>16:00</ig>
+    </idopont>
+    <helyszin>In/103 In I. em. 103</helyszin>
+    <oktato>Dr. Bendarik László</oktato>
+    <szak>Programmtervező Informatikus</szak>
+  </ora>
+    <ora id="03" tipus="előadás">
+    <targy>Vállalati információs rendszerek</targy>
+    <idopont>
+      <nap>Szerda</nap>
+      <tol>16:00</tol>
+      <ig>20:00</ig>
+    </idopont>
+    <helyszin>In/103 In I. em. 103</helyszin>
+    <oktato>Dr. Sasvári Péter</oktato>
+    <szak>Programmtervező Informatikus</szak>
+  </ora>
 </orarend>
