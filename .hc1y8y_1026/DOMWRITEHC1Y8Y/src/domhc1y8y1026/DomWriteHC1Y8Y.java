@@ -61,9 +61,12 @@ public class DomWriteHC1Y8Y {
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource source = new DOMSource(doc);
         StreamResult result = new StreamResult(output);
+	StreamResult resul1 = new StreamResult(System.out);
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");;
+	
 
         transformer.transform(source, result);
+	transformer.transform(source, result1);
 
     }
 }
