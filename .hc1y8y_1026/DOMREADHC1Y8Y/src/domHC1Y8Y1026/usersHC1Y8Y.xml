@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xs:noNamespaceSchemaLocation="http://example.com/usersHC1Y8Y.xsd">
+	<user id="1">
+			<firstname>Pista</firstname>
+			<lastname>Kiss</lastname>
+			<profession>mernök</profession>
+	</user>
+		<user id="2">
+			<firstname>Pista</firstname>
+			<lastname>Kiss</lastname>
+			<profession>mernök</profession>
+	</user>
+		<user id="3">
+			<firstname>Pista</firstname>
+			<lastname>Kiss</lastname>
+			<profession>mernök</profession>
+	</user>
+</users>
