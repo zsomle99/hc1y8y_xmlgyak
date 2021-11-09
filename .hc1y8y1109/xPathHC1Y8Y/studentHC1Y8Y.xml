@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xs:noNamespaceSchemaLocation="http://example.com/studentHC1Y8Y.xsd">
+	<student id = "1">
+		<firstname>X</firstname>
+		<lastname>Y</lastname>
+		<age>18</age>
+		<nickname>Xs</nickname>
+	</student>
+	<student id = "2">
+		<firstname>P</firstname>
+		<lastname>Z</lastname>
+		<age>20</age>
+		<nickname>Ps</nickname>
+	</student>
+	<student id = "3">
+		<firstname>O</firstname>
+		<lastname>J</lastname>
+		<age>24</age>
+		<nickname>Os</nickname>
+	</student>
+</class>
