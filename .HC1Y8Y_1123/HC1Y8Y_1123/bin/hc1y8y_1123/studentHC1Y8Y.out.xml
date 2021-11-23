@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h2>Hallgatok apply-template</h2>
+        	
+        <p>
+              Firstname: <span style="color:green">X</span>
+  Lastname: <span style="color:purple">Y</span>
+  Age: <span style="color:blue">18</span>
+  Nickname: <span style="color:gray">Xs</span>
+  Salary: <span style="color:red">600000</span>
+        </p>
+        	
+        <p>
+              Firstname: <span style="color:green">P</span>
+  Lastname: <span style="color:purple">Z</span>
+  Age: <span style="color:blue">20</span>
+  Nickname: <span style="color:gray">Ps</span>
+  Salary: <span style="color:red">600000</span>
+        </p>
+        	
+        <p>
+              Firstname: <span style="color:green">O</span>
+  Lastname: <span style="color:purple">J</span>
+  Age: <span style="color:blue">24</span>
+  Nickname: <span style="color:gray">Os</span>
+  Salary: <span style="color:red">600000</span>
+        </p>
+        
+    </body>
+</html>
