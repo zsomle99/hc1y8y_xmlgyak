@@ -32,71 +32,77 @@ public class DomReadHC1Y8Y {
 	              Node node = list.item(temp);
 	              if (node.getNodeType() == Node.ELEMENT_NODE) {
 	                  Element element = (Element) node;  
-	                  //id elérése
+	                  //id elÃ©rÃ©se
 	                  String hid = element.getAttribute("hid"); 
 	                  
-	                  //Stringek elérése
-	                  String hibaüzenet = element.getElementsByTagName("hibaüzenet").item(0).getTextContent();
-	                  String mióta = element.getElementsByTagName("mióta").item(0).getTextContent();
-	                  String hányszor = element.getElementsByTagName("hányszor").item(0).getTextContent();
+	                  //Stringek elÃ©rÃ©se
+	                  String hibaÃ¼zenet = element.getElementsByTagName("hibaÃ¼zenet").item(0).getTextContent();
+	                  String miÃ³ta = element.getElementsByTagName("miÃ³ta").item(0).getTextContent();
+	                  String hÃ¡nyszor = element.getElementsByTagName("hÃ¡nyszor").item(0).getTextContent();
 	                  
-	                  //Kiiratás
+	                  //KiiratÃ¡s
 	                  System.out.println("Current Element :" + node.getNodeName());
 	                  System.out.println("Hiba Id : " + hid);
-	                  System.out.println("Hibaüzenet : " + hibaüzenet);
-	                  System.out.println("A hiba fennáll : " + mióta + " óta");
-	                  System.out.println("A hiba elõfordult : " + hányszor);
+	                  System.out.println("HibaÃ¼zenet : " + hibaÃ¼zenet);
+	                  System.out.println("A hiba fennÃ¡ll : " + miÃ³ta + " Ã³ta");
+	                  System.out.println("A hiba elÅ‘fordult : " + hÃ¡nyszor);
 	                  System.out.println();
 	                  
-	                  NodeList ügyfel = doc.getElementsByTagName("ügyfél");
-		                Node ünode = ügyfel.item(temp);
-						if(ünode.getNodeType() == Node.ELEMENT_NODE) {
-							Element üelement = (Element) ünode;
+	                  NodeList Ã¼gyfel = doc.getElementsByTagName("Ã¼gyfÃ©l");
+		                Node Ã¼node = Ã¼gyfel.item(temp);
+						if(Ã¼node.getNodeType() == Node.ELEMENT_NODE) {
+							Element Ã¼element = (Element) Ã¼node;
 							
-							String üid = üelement.getAttribute("üid");	
-							String szül_idõ = üelement.getElementsByTagName("szül_idõ").item(0).getTextContent();
-							String szül_hely = üelement.getElementsByTagName("szül_hely").item(0).getTextContent();
-							String kód = üelement.getElementsByTagName("kód").item(0).getTextContent();
-							String név = üelement.getElementsByTagName("név").item(0).getTextContent();
-								
-							System.out.println("Az ügyfél idja : " + üid);
-							System.out.println("Az ügyfél szül. ideje : " + szül_idõ);
-				            System.out.println("Az ügyfél szül. helye : " + szül_hely);
-				            System.out.println("Az ügyfél kódja : " + kód);
-				            System.out.println("Az ügyfél neve : " + név);
+							//Stringek elÃ©rÃ©se
+							String Ã¼id = Ã¼element.getAttribute("Ã¼id");	
+							String szÃ¼l_idÅ‘ = Ã¼element.getElementsByTagName("szÃ¼l_idÅ‘").item(0).getTextContent();
+							String szÃ¼l_hely = Ã¼element.getElementsByTagName("szÃ¼l_hely").item(0).getTextContent();
+							String kÃ³d = Ã¼element.getElementsByTagName("kÃ³d").item(0).getTextContent();
+							String nÃ©v = Ã¼element.getElementsByTagName("nÃ©v").item(0).getTextContent();
+							
+							//KiiratÃ¡s
+							System.out.println("Az Ã¼gyfÃ©l idja : " + Ã¼id);
+							System.out.println("Az Ã¼gyfÃ©l szÃ¼l. ideje : " + szÃ¼l_idÅ‘);
+				            System.out.println("Az Ã¼gyfÃ©l szÃ¼l. helye : " + szÃ¼l_hely);
+				            System.out.println("Az Ã¼gyfÃ©l kÃ³dja : " + kÃ³d);
+				            System.out.println("Az Ã¼gyfÃ©l neve : " + nÃ©v);
 				            System.out.println();
 				            
 				            
-				       NodeList ügyintezo = doc.getElementsByTagName("ügyintézõ");
-				       		Node ügynode = ügyintezo.item(temp);
-							if(ügynode.getNodeType() == Node.ELEMENT_NODE) {
-								Element ügyelement = (Element) ügynode;
+				       NodeList Ã¼gyintezo = doc.getElementsByTagName("Ã¼gyintÃ©zÅ‘");
+				       		Node Ã¼gynode = Ã¼gyintezo.item(temp);
+							if(Ã¼gynode.getNodeType() == Node.ELEMENT_NODE) {
+								Element Ã¼gyelement = (Element) Ã¼gynode;
 								
-								String ügyid = ügyelement.getAttribute("ügyid");	
-								String szint = ügyelement.getElementsByTagName("szint").item(0).getTextContent();
-								String beosztás = ügyelement.getElementsByTagName("beosztás").item(0).getTextContent();
-								String ügynév = ügyelement.getElementsByTagName("név").item(0).getTextContent();
+								//Stringek elÃ©rÃ©se
+								String Ã¼gyid = Ã¼gyelement.getAttribute("Ã¼gyid");	
+								String szint = Ã¼gyelement.getElementsByTagName("szint").item(0).getTextContent();
+								String beosztÃ¡s = Ã¼gyelement.getElementsByTagName("beosztÃ¡s").item(0).getTextContent();
+								String Ã¼gynÃ©v = Ã¼gyelement.getElementsByTagName("nÃ©v").item(0).getTextContent();
 									
-								System.out.println("Az ügyintézõ idja : " + ügyid);
-								System.out.println("Az ügyintézõ szintje : " + szint);
-					            System.out.println("Az ügyintézõ beosztása : " + beosztás);
-					            System.out.println("Az ügyintézõ neve : " + ügynév);
+								//KiiratÃ¡s
+								System.out.println("Az Ã¼gyintÃ©zÅ‘ idja : " + Ã¼gyid);
+								System.out.println("Az Ã¼gyintÃ©zÅ‘ szintje : " + szint);
+					            System.out.println("Az Ã¼gyintÃ©zÅ‘ beosztÃ¡sa : " + beosztÃ¡s);
+					            System.out.println("Az Ã¼gyintÃ©zÅ‘ neve : " + Ã¼gynÃ©v);
 					            System.out.println();
 					          
-					  NodeList vezeto = doc.getElementsByTagName("vezetõ");
+					  NodeList vezeto = doc.getElementsByTagName("vezetÅ‘");
 					       	Node vnode = vezeto.item(temp);
 							if(vnode.getNodeType() == Node.ELEMENT_NODE) {
 								Element velement = (Element) vnode;
 									
+								//Stringek elÃ©rÃ©se
 								String vid = velement.getAttribute("vid");	
 								String vszint = velement.getElementsByTagName("szint").item(0).getTextContent();
-								String vbeosztás = velement.getElementsByTagName("beosztás").item(0).getTextContent();
-								String vnév = velement.getElementsByTagName("név").item(0).getTextContent();
-										
-								System.out.println("A vezetõ idja : " + vid);
-								System.out.println("A vezetõ szintje : " + vszint);
-						        System.out.println("A vezetõ beosztása : " + vbeosztás);
-						        System.out.println("A vezetõ neve : " + vnév);
+								String vbeosztÃ¡s = velement.getElementsByTagName("beosztÃ¡s").item(0).getTextContent();
+								String vnÃ©v = velement.getElementsByTagName("nÃ©v").item(0).getTextContent();
+									
+								//KiiratÃ¡s
+								System.out.println("A vezetÅ‘ idja : " + vid);
+								System.out.println("A vezetÅ‘ szintje : " + vszint);
+						        System.out.println("A vezetÅ‘ beosztÃ¡sa : " + vbeosztÃ¡s);
+						        System.out.println("A vezetÅ‘ neve : " + vnÃ©v);
 						        System.out.println();
 								}
 
