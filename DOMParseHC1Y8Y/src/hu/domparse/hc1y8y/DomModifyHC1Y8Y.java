@@ -21,21 +21,25 @@ public class DomModifyHC1Y8Y {
          Node hibakezeles = doc.getFirstChild();
          Node hiba = doc.getElementsByTagName("hiba").item(0);
          
+         //02-re módosítjuk a hid-t 01ről
          NamedNodeMap attr = hiba.getAttributes();
          Node nodeAttr = attr.getNamedItem("hid");
          nodeAttr.setTextContent("02");
          
          NodeList list = hiba.getChildNodes();
          
+         //a hányszor előfordulást módosítjuk 3-ról 2re
          for (int temp = 0; temp < list.getLength(); temp++) {
         	 Node node = list.item(temp);
         	 if (node.getNodeType() == Node.ELEMENT_NODE) {
         		 Element hElement = (Element) node ;
-        		 if ("h�nyszor".equals(hElement.getNodeName())) {
+        		 if ("hányszor".equals(hElement.getNodeName())) {
         			 if("3".equals(hElement.getTextContent())) 
         				hElement.setTextContent("2"); 
         			 }
-        		 if("mi�ta".equals(hElement.getNodeName())) {
+        		 
+        		 //az időpontot 10:00-ról 11:00-ra módosítjuk
+        		 if("mióta".equals(hElement.getNodeName())) {
         			 if("10:00".equals(hElement.getTextContent()))
         				 hElement.setTextContent("11:00");
         		 }
@@ -44,14 +48,17 @@ public class DomModifyHC1Y8Y {
         	 for(int count = 0; count < childNodes.getLength(); count++) {
         		 Node node2 = childNodes.item(count);
         		 
-        		 if("Mi�ta".equals(node.getNodeName()))
+        		 //kitöröljük a MIóta elementet.
+        		 if("Mióta".equals(node.getNodeName()))
         			 hiba.removeChild(node2);
         	 }
          }
+         
+         //kiíratás
         	 TransformerFactory transformerFactory = TransformerFactory.newInstance();
              Transformer transformer = transformerFactory.newTransformer();
              DOMSource source = new DOMSource(doc);
-             System.out.println("-----------M�dos�tott File-----------");
+             System.out.println("-----------Módosított File-----------");
              StreamResult consoleResult = new StreamResult(System.out);
              transformer.transform(source, consoleResult);
           } catch (Exception e) {
