@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="hibakezelés">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hiba" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="hibaüzenet"/>
+              <xs:element name="időtartam">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="mióta"/>
+                    <xs:element type="xs:nonNegativeInteger" name="hányszor"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ügyfél">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="szül_idő"/>
+                    <xs:element type="xs:string" name="szül_hely"/>
+                    <xs:element type= "xs:nonNegativeInteger" name="kód"/>
+                    <xs:element type="xs:string" name="név"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:nonNegativeInteger" name="üid" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ügyintéző">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:nonNegativeInteger" name="szint"/>
+                    <xs:element type="xs:string" name="név"/>
+                    <xs:element type="xs:string" name="beosztás"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:nonNegativeInteger" name="ügyid" use="required"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="vezető">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="név"/>
+                    <xs:element type="xs:string" name="beosztás"/>
+                    <xs:element type="xs:nonNegativeInteger" name="szint"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:nonNegativeInteger" name="vid" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:nonNegativeInteger" name="hid" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
