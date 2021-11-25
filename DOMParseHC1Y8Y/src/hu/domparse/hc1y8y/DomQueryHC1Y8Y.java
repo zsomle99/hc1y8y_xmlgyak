@@ -17,45 +17,48 @@ public class DomQueryHC1Y8Y {
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(inputFile);
 			doc.getDocumentElement().normalize();
-			System.out.println("Root element: ");
+			System.out.print("Root element: ");
 			System.out.println(doc.getDocumentElement().getNodeName());
 			NodeList nlist = doc.getElementsByTagName("hiba");
 			System.out.println("-------------------------------------------");
 			
+			//Kiválasztjuk és kiírjuk a Hiba elemet.
 			for(int temp =0; temp < nlist.getLength(); temp++) {
 				Node nNode = nlist.item(temp);
 				System.out.println("\n Current Element: ");
 				System.out.println(nNode.getNodeName());
 				
+				//a hibán belül megkeressük a hibaüzenet elemeket és kiiratjuk id-nak megfelelően 
 				if(nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element hElement = (Element) nNode;
 					System.out.print("id : ");
 					System.out.println(hElement.getAttribute("hid"));
-					NodeList hiba�zenetlist = hElement.getElementsByTagName("hiba�zenet");
+					NodeList hibaüzenetlist = hElement.getElementsByTagName("hibaüzenet");
 					
-					for (int count = 0; count < hiba�zenetlist.getLength(); count++) {
-						Node node = hiba�zenetlist.item(count);
+					for (int count = 0; count < hibaüzenetlist.getLength(); count++) {
+						Node node = hibaüzenetlist.item(count);
 						
 						if (node.getNodeType() == Node.ELEMENT_NODE) {
-							Element hiba�zenet = (Element) node;
-							System.out.print("hiba�zenet: :");
-							System.out.println(hiba�zenet.getTextContent());
+							Element hibaüzenet = (Element) node;
+							System.out.print("hibaüzenet: :");
+							System.out.println(hibaüzenet.getTextContent());
 						}
 					}
 				}
+				//a hibán belül megkeressük a beosztás elemeket és kiiratjuk idnak megfelelően.
 				if(nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element hElement = (Element) nNode;
 					System.out.print("id : ");
 					System.out.println(hElement.getAttribute("hid"));
-					NodeList beoszt�slist = hElement.getElementsByTagName("beoszt�s");
+					NodeList beosztáslist = hElement.getElementsByTagName("beosztás");
 					
-					for (int count = 0; count < beoszt�slist.getLength(); count++) {
-						Node node = beoszt�slist.item(count);
+					for (int count = 0; count < beosztáslist.getLength(); count++) {
+						Node node = beosztáslist.item(count);
 						
 						if (node.getNodeType() == Node.ELEMENT_NODE) {
-							Element beoszt�s = (Element) node;
-							System.out.print("beoszt�s: :");
-							System.out.println(beoszt�s.getTextContent());
+							Element beosztás = (Element) node;
+							System.out.print("beosztás: :");
+							System.out.println(beosztás.getTextContent());
 						}
 					}
 				}
