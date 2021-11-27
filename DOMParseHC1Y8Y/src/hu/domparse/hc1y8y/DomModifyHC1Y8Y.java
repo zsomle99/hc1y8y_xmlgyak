@@ -18,7 +18,6 @@ public class DomModifyHC1Y8Y {
     	 DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
          DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
          Document doc = docBuilder.parse(inputFile);
-         Node hibakezeles = doc.getFirstChild();
          Node hiba = doc.getElementsByTagName("hiba").item(0);
          
          //02-re módosítjuk a hid-t 01ről
@@ -28,29 +27,41 @@ public class DomModifyHC1Y8Y {
          
          NodeList list = hiba.getChildNodes();
          
-         //a hányszor előfordulást módosítjuk 3-ról 2re
+         //a hibaüzenetet megváltoztatjuk
          for (int temp = 0; temp < list.getLength(); temp++) {
         	 Node node = list.item(temp);
         	 if (node.getNodeType() == Node.ELEMENT_NODE) {
         		 Element hElement = (Element) node ;
-        		 if ("hányszor".equals(hElement.getNodeName())) {
-        			 if("3".equals(hElement.getTextContent())) 
-        				hElement.setTextContent("2"); 
-        			 }
-        		 
-        		 //az időpontot 10:00-ról 11:00-ra módosítjuk
-        		 if("mióta".equals(hElement.getNodeName())) {
-        			 if("10:00".equals(hElement.getTextContent()))
-        				 hElement.setTextContent("11:00");
-        		 }
+        		 if ("hibaüzenet".equals(hElement.getNodeName())) {
+        			 if("TV hibaüzenet".equals(hElement.getTextContent())) 
+        				hElement.setTextContent("asd"); 
+        			 }		 
         	 }
-        	 NodeList childNodes = hibakezeles.getChildNodes();
-        	 for(int count = 0; count < childNodes.getLength(); count++) {
-        		 Node node2 = childNodes.item(count);
-        		 
-        		 //kitöröljük a MIóta elementet.
-        		 if("Mióta".equals(node.getNodeName()))
-        			 hiba.removeChild(node2);
+   
+        	 }
+         //nodelist létrehozása az ügyfél alapján
+         NodeList list2 = doc.getElementsByTagName("ügyfél");
+         for (int j = 0; j < list2.getLength(); j++) {
+        	 Node ügyfél = list2.item(j);
+        	 if(ügyfél.getNodeType() == Node.ELEMENT_NODE) {
+        		 //üid alapján megkeressük a megfelelő ügyfélt
+        		 String id = ügyfél.getAttributes().getNamedItem("üid").getTextContent();
+        		 if ("01".equals(id.trim())) {
+        			 NodeList gyerekNodes = ügyfél.getChildNodes();
+        			 for (int k = 0; k < gyerekNodes.getLength(); k++) {
+        				 Node item = gyerekNodes.item(k);
+        				 if (item.getNodeType() == Node.ELEMENT_NODE) {
+        					 //kitöröljük az ügyfélből a kód mezőt
+        					 if("kód".equalsIgnoreCase(item.getNodeName())) {
+        						 ügyfél.removeChild(item);
+        					 }
+        					 // módosítjuk az 1-es ügyfélidvel rendelkező nevét
+        					 if ("név".equalsIgnoreCase(item.getNodeName())) {
+        						 item.setTextContent("XYK");
+        					 }
+        				 }
+        			 }
+        		 }
         	 }
          }
          
