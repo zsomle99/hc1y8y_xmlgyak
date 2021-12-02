@@ -4,9 +4,64 @@
 	<hiba hid="01">
 		<hibaüzenet>TV hibaüzenet</hibaüzenet>
 		<időtartam>
+			<hibaazon>1</hibaazon>
 			<mióta>10:00</mióta>
 			<hányszor>3</hányszor>
 		</időtartam>
+		
+		<tv>
+			<ügyfélazon>1</ügyfélazon>
+			<hibaazon>1</hibaazon>
+			<hibaidő>22 óra</hibaidő>
+			<gyakoriság>gyakori</gyakoriság>
+		</tv>
+		
+		<telefon>
+			<ügyfélazon>2</ügyfélazon>
+			<hibaazon>2</hibaazon>
+			<hibaidő>1 óra</hibaidő>
+			<gyakoriság>gyakori</gyakoriság>
+		</telefon>
+		
+		<internet>
+			<ügyfélazon>3</ügyfélazon>
+			<hibaazon>3</hibaazon>
+			<hibaidő>19 óra</hibaidő>
+			<gyakoriság>gyakori</gyakoriság>
+		</internet>
+		
+		<email id="1">
+			<ügyfélazon>1</ügyfélazon>
+			<vezetőazon>1</vezetőazon>
+		</email>
+		
+		<levél>
+			<ügyfélazon>2</ügyfélazon>
+			<vezetőazon>2</vezetőazon>
+		</levél>
+		
+		<email id="2">
+			<ügyintézőazon>1</ügyintézőazon>
+			<vezetőazon>3</vezetőazon>
+		</email>
+		
+		<telefon id="1">
+			<ügyintézőazon>2</ügyintézőazon>
+			<vezetőazon>1</vezetőazon>
+			<idő>
+				<mettől>9:00</mettől>
+				<meddig>10:00</meddig>
+			</idő>
+		</telefon>
+		
+		<telefon id="2">
+			<ügyintézőazon>1</ügyintézőazon>
+			<ügyfélazon>1</ügyfélazon>
+			<idő>
+				<mettől>10:00</mettől>
+				<meddig>10:10</meddig>
+			</idő>
+		</telefon>
 	
 	
 		<ügyfél üid="01">
