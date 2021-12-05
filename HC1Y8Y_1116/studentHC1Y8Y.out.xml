@@ -1,0 +1,35 @@
+<html>
+	<body>
+		<h2>Students</h2>
+		<table border="1">
+			<tr bgcolor="#9acd32">
+				<th>Id</th>
+				<th>Keresztnev</th>
+				<th>Vezeteknev</th>
+				<th>Becenev</th>
+				<th>Kor</th>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Dénes</td>
+				<td>Orosz</td>
+				<td>nincs/td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Dániel</td>
+				<td>Nemcsik</td>
+				<td>niincs</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Mek</td>
+				<td>Elek</td>
+				<td>Meki</td>
+				<td>12</td>
+			</tr>
+		</table>
+	</body>
+</html>

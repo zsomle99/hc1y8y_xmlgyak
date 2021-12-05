@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<?xml-stylesheet type='text/xsl' href='studentHC1Y8Y.xsl'?>
+
+<class>
+    <student id = "0">
+        <keresztnev>Dénes</keresztnev>
+        <vezeteknev>Orosz</vezeteknev>
+        <becenev>nincs</becenev>
+        <kor>22</kor>
+    </student>
+    <student id = "1">
+        <keresztnev>Nemcsik</keresztnev>
+        <vezeteknev>Dániel</vezeteknev>
+        <becenev>niincs</becenev>
+        <kor>22</kor>
+    </student>
+    <student id = "2">
+        <keresztnev>Mek</keresztnev>
+        <vezeteknev>ELek</vezeteknev>
+        <becenev>Meki</becenev>
+        <kor>12</kor>
+    </student>
+</class>
