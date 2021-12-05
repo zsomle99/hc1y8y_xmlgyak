@@ -1,107 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="hibakezelés">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="hiba" maxOccurs="unbounded" minOccurs="0">
-          <xs:complexType>
-            <xs:choice maxOccurs="unbounded" minOccurs="0">
-              <xs:element type="xs:string" name="hibaüzenet"/>
-              <xs:element name="időtartam">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:string" name="mióta"/>
-                    <xs:element type="xs:nonNegativeInteger" name="hányszor"/>
-                    <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="tv">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
-                    <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
-                    <xs:element type="xs:string" name="hibaidő"/>
-                    <xs:element type="xs:string" name="gyakoriság"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="telefon">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
-                    <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
-                    <xs:element type="xs:string" name="hibaidő"/>
-                    <xs:element type="xs:string" name="gyakoriság"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="internet">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
-                    <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
-                    <xs:element type="xs:string" name="hibaidő"/>
-                    <xs:element type="xs:string" name="gyakoriság"/>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="email">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
-                    <xs:element type="xs:nonNegativeInteger" name="vezetőazon"/>
-                  </xs:sequence>
-                  <xs:attribute type="xs:nonNegativeInteger" name="id"/>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="levél">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyfélazon" minOccurs="0"/>
-                    <xs:element type="xs:nonNegativeInteger" name="ügyintézőazon" minOccurs="0"/>
-                    <xs:element type="xs:nonNegativeInteger" name="vezetőazon"/>
-                  </xs:sequence>
-                  <xs:attribute type="xs:nonNegativeInteger" name="id" use="optional"/>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="ügyfél">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:string" name="szül_idő"/>
-                    <xs:element type="xs:string" name="szül_hely"/>
-                    <xs:element type="xs:nonNegativeInteger" name="kód"/>
-                    <xs:element type="xs:string" name="név"/>
-                  </xs:sequence>
-                  <xs:attribute type="xs:nonNegativeInteger" name="üid" use="optional"/>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="ügyintéző">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:nonNegativeInteger" name="szint"/>
-                    <xs:element type="xs:string" name="név"/>
-                    <xs:element type="xs:string" name="beosztás"/>
-                  </xs:sequence>
-                  <xs:attribute type="xs:nonNegativeInteger" name="ügyid" use="optional"/>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="vezető">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element type="xs:string" name="név"/>
-                    <xs:element type="xs:string" name="beosztás"/>
-                    <xs:element type="xs:nonNegativeInteger" name="szint"/>
-                  </xs:sequence>
-                  <xs:attribute type="xs:nonNegativeInteger" name="vid" use="optional"/>
-                </xs:complexType>
-              </xs:element>
-            </xs:choice>
-            <xs:attribute type="xs:nonNegativeInteger" name="hid" use="optional"/>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="hibakezelés" type="hibakezelésType"/>
+  <xs:complexType name="időtartamType">
+    <xs:sequence>
+      <xs:element type="xs:nonNegativeInteger" name="hibaazon" minOccurs="0"/>
+      <xs:element type="xs:string" name="mióta"/>
+      <xs:element type="xs:nonNegativeInteger" name="hányszor"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tvType">
+    <xs:sequence>
+      <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
+      <xs:element type="xs:string" name="hibaidő"/>
+      <xs:element type="xs:string" name="gyakoriság"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="telefonType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:nonNegativeInteger" name="ügyfélazon" minOccurs="0"/>
+      <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
+      <xs:element type="xs:string" name="hibaidő"/>
+      <xs:element type="xs:string" name="gyakoriság"/>
+      <xs:element type="xs:nonNegativeInteger" name="ügyintézőazon" minOccurs="0"/>
+      <xs:element type="xs:nonNegativeInteger" name="vezetőazon" minOccurs="0"/>
+      <xs:element type="időType" name="idő"/>
+    </xs:choice>
+    <xs:attribute type="xs:nonNegativeInteger" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="internetType">
+    <xs:sequence>
+      <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
+      <xs:element type="xs:string" name="hibaidő"/>
+      <xs:element type="xs:string" name="gyakoriság"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="emailType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:nonNegativeInteger" name="ügyfélazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="ügyintézőazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="vezetőazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="hibaazon"/>
+      <xs:element type="xs:string" name="hibaidő"/>
+      <xs:element type="xs:string" name="gyakoriság"/>
+      <xs:element type="időType" name="idő"/>
+    </xs:choice>
+    <xs:attribute type="xs:nonNegativeInteger" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="levélType">
+    <xs:sequence>
+      <xs:element type="xs:nonNegativeInteger" name="ügyfélazon" minOccurs="0"/>
+      <xs:element type="xs:nonNegativeInteger" name="ügyintézőazon"/>
+      <xs:element type="xs:nonNegativeInteger" name="vezetőazon"/>
+    </xs:sequence>
+    <xs:attribute type="xs:nonNegativeInteger" name="id" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="időType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="mettől"/>
+      <xs:element type="xs:string" name="meddig"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ügyfélType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="szül_idő"/>
+      <xs:element type="xs:string" name="szül_hely"/>
+      <xs:element type="xs:nonNegativeInteger" name="kód"/>
+      <xs:element type="xs:string" name="név"/>
+    </xs:sequence>
+    <xs:attribute type="xs:nonNegativeInteger" name="üid" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="ügyintézőType">
+    <xs:sequence>
+      <xs:element type="xs:nonNegativeInteger" name="szint"/>
+      <xs:element type="xs:string" name="név"/>
+      <xs:element type="xs:string" name="beosztás"/>
+    </xs:sequence>
+    <xs:attribute type="xs:nonNegativeInteger" name="ügyid" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="vezetőType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="név"/>
+      <xs:element type="xs:string" name="beosztás"/>
+      <xs:element type="xs:nonNegativeInteger" name="szint"/>
+    </xs:sequence>
+    <xs:attribute type="xs:nonNegativeInteger" name="vid" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="hibaType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="hibaüzenet"/>
+      <xs:element type="időtartamType" name="időtartam"/>
+      <xs:element type="tvType" name="tv"/>
+      <xs:element type="telefonType" name="telefon"/>
+      <xs:element type="internetType" name="internet"/>
+      <xs:element type="emailType" name="email"/>
+      <xs:element type="levélType" name="levél"/>
+      <xs:element type="ügyfélType" name="ügyfél"/>
+      <xs:element type="ügyintézőType" name="ügyintéző"/>
+      <xs:element type="vezetőType" name="vezető"/>
+    </xs:choice>
+    <xs:attribute type="xs:nonNegativeInteger" name="hid" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="hibakezelésType">
+    <xs:sequence>
+      <xs:element type="hibaType" name="hiba" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
 </xs:schema>
